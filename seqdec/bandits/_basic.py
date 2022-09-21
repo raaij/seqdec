@@ -1,6 +1,6 @@
 import numpy as np
 
-from bandits._base import _BanditBase
+from seqdec.bandits._base import _BanditBase
 
 
 class EpsilonGreedyBandit(_BanditBase):
