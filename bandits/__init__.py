@@ -1,1 +1,1 @@
-from bandits._basic import EpsilonGreedyBandit
+from bandits._basic import EpsilonGreedyBandit, UCBBandit
