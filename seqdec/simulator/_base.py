@@ -12,6 +12,11 @@ class _BaseSimulator(ABC):
 class _SimpleSimulator(_BaseSimulator):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+    
+    @abstractmethod
+    def play(self):
+        # returns reward
+        raise NotImplementedError()
 
 
 class _ContextualSimulator(_BaseSimulator):
@@ -19,5 +24,6 @@ class _ContextualSimulator(_BaseSimulator):
         super().__init__(*args, **kwargs)
 
     @abstractmethod
-    def observe(self):
+    def play(self):
+        # returns reward, context
         raise NotImplementedError()
