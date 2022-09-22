@@ -20,7 +20,7 @@ class HypothesisTest(ABC):
                 1: 0
             }
             for _ in range(5_000):
-                reward = self.sim.play(option)
+                reward, _ = self.sim.play(option)
                 data[reward] += 1
 
             result.append(data)

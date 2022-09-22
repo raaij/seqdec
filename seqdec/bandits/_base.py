@@ -19,5 +19,5 @@ class _BanditBase(ABC):
     def run(self):
         for _ in range(self.iter):
             arm = self.choose()
-            reward = self.sim.play(arm)
+            reward, _ = self.sim.play(arm)
             self.update(arm, reward)

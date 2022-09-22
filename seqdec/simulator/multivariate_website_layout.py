@@ -68,6 +68,8 @@ class MultivariateWebsiteLayout(_ContextualSimulator):
         self.W_1c = np.random.normal(size=(self.L, self.k))
 
     def _initialize_layouts(self):
+        # FIXME: Only works with 3 widgets
+
         import itertools 
 
         layouts = [
@@ -117,7 +119,6 @@ class MultivariateWebsiteLayout(_ContextualSimulator):
             for layout in self.layouts
         ]))
 
-        print(p[arm])
         reward = int(np.random.random() < p[arm])
         return reward, X
 

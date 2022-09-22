@@ -10,4 +10,5 @@ class BernoulliSimulator(_SimpleSimulator):
         self.proba = p if p else np.random.uniform(size=k)
 
     def play(self, arm):
-        return np.random.random() < self.proba[arm]
+        reward = np.random.random() < self.proba[arm]
+        return reward, None

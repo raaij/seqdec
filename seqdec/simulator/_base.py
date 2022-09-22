@@ -1,3 +1,7 @@
+"""
+FIXME: Only have 1 base simulator class, any simulator needs to return context
+"""
+
 from abc import ABC, abstractmethod
 
 import numpy as np
@@ -15,7 +19,7 @@ class _SimpleSimulator(_BaseSimulator):
     
     @abstractmethod
     def play(self):
-        # returns reward
+        # returns reward, context
         raise NotImplementedError()
 
 
